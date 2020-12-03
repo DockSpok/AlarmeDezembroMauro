@@ -1,18 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50sp"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:text="Informe o horário desejado para realizar o agendamento do despertador." />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/edtHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="time"
+        android:text="00:00"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30sp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkBoxDom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Domingo" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSeg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Segunda" />
+
+        <CheckBox
+            android:id="@+id/checkBoxTer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terça" />
+
+        <CheckBox
+            android:id="@+id/checkBoxQua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quarta" />
+
+        <CheckBox
+            android:id="@+id/checkBoxQui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quinta" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexta" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sábado" />
+
+        <Button
+            android:id="@+id/btnAgendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:background="#673AB7"
+            android:text="Agendar"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>
